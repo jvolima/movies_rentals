@@ -23,5 +23,5 @@ Should not be able to create users if email already exists.
 **RF**
 Should be able to authenticate an user.
 
-**RF**
+**RN**
 Should not be able to authenticate user if email or password is incorrect.
