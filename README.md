@@ -66,5 +66,11 @@
 **RN**
 - Should not be able to list the user's rentals if user isn't authenticated.
 
+## Skills developed
+- Creation of database diagram
+- Business rule creation and functionalities
+- User authentication
+- Addiction injection with the tsyringe
+
 ## Diagram
 ![Diagrama do banco de dados](./movie_rental.png)
