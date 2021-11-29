@@ -65,3 +65,6 @@
 
 **RN**
 - Should not be able to list the user's rentals if user isn't authenticated.
+
+## Diagram
+![Diagrama do banco de dados](./movie_rental.png)
