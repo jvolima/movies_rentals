@@ -11,7 +11,7 @@
 - SQLite
 
 ## Functionalities
-Project functionalities [functionalities](./functionalities.md)
+Project [functionalities](./functionalities.md)
 
 ## Skills developed
 - Creation of database diagram
