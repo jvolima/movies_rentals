@@ -18,6 +18,7 @@ Project [functionalities](./functionalities.md)
 - Business rule creation and functionalities
 - User authentication
 - Addiction injection with the tsyringe
+- Date manipulation with dayjs
 
 ## Diagram
 ![Diagrama do banco de dados](./movie_rental.png)
