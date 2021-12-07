@@ -27,6 +27,14 @@ class GenresRepository implements IGenresRepository {
 
     return genres;
   }
+
+  async findById(id: string): Promise<Genre> {
+    const genre = await prismaClient.genre.findFirst({
+      where: { id }
+    });
+
+    return genre as Genre;
+  }
 }
 
 export { GenresRepository }

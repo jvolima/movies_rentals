@@ -16,11 +16,11 @@
 
 ### Create movies
 **RF**
-- [] Should be able to add a new movie.
+- [x] Should be able to add a new movie.
 
 **RN**
-- [] Should not be able to add a new movie if user is not admin.
-- [] Should not be able to add a new movie if genre does not exists.
+- [x] Should not be able to add a new movie if user is not admin.
+- [x] Should not be able to add a new movie if genre does not exists.
 
 ### List movies
 **RF**
