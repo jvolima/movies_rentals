@@ -21,6 +21,7 @@ model User {
   @@map("users")
 
   rentals Rental[]
+
 }
 
 model Genre {
@@ -64,16 +65,17 @@ model MovieImage {
 }
 
 model Rental {
-  id                    String @id @default(uuid())
-  user_id               String 
-  movie_id              String
-  start_date            DateTime @default(now())
-  end_date              DateTime
-  expected_return_date  DateTime
-  total                 Float
+  id String @id @default(uuid())
+  user_id String
+  movie_id String
+  start_at DateTime @default(now())
+  end_at DateTime?
+  expected_return_date DateTime
+  total Float? 
 
   @@map("rentals")
 
-  movie Movie @relation(fields: [movie_id], references: [id])
   user User @relation(fields: [user_id], references: [id])
+  movie Movie @relation(fields: [movie_id], references: [id])
 }
+
