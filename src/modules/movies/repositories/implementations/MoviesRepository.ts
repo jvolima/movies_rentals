@@ -38,6 +38,17 @@ class MoviesRepository implements IMoviesRepository {
 
     return availableMovies;
   }
+
+  async findUnavailableById(id: string): Promise<Movie> {
+    const movieUnavailable = await prismaClient.movie.findFirst({
+      where: { 
+        id,
+        available: false
+      }
+    });
+
+    return movieUnavailable as Movie;
+  }
 }
 
 export { MoviesRepository }

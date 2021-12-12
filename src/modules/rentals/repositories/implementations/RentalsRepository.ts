@@ -15,6 +15,17 @@ class RentalsRepository implements IRentalsRepository {
 
     return rental;
   }
+
+  async findOpenRentalByUser(user_id: string): Promise<Rental> {
+    const openRental = await prismaClient.rental.findFirst({
+      where: {
+        user_id,
+        end_at: null
+      }
+    });
+
+    return openRental as Rental;
+  }
 }
 
 export { RentalsRepository }
