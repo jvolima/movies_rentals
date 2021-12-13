@@ -46,6 +46,8 @@ class CreateRentalUseCase {
       expected_return_date
     });
 
+    await this.moviesRepository.updataAvailable(movie_id, false);
+
     return rental;
   }
 }

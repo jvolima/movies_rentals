@@ -49,6 +49,17 @@ class MoviesRepository implements IMoviesRepository {
 
     return movieUnavailable as Movie;
   }
+
+  async updataAvailable(id: string, available: boolean): Promise<void> {
+    await prismaClient.movie.update({
+      where: {
+        id
+      },
+      data: {
+        available
+      }
+    })
+  }
 }
 
 export { MoviesRepository }
