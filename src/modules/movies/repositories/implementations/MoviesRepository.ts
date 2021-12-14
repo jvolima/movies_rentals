@@ -60,6 +60,14 @@ class MoviesRepository implements IMoviesRepository {
       }
     })
   }
+
+  async findById(id: string): Promise<Movie> {
+    const movie = await prismaClient.movie.findFirst({
+      where: { id }
+    });
+
+    return movie as Movie;
+  }
 }
 
 export { MoviesRepository }

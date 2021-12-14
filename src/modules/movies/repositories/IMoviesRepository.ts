@@ -11,6 +11,7 @@ interface IMoviesRepository {
   list({ name, genre_id }: IRequest): Promise<Movie[]>
   findUnavailableById(id: string): Promise<Movie>
   updataAvailable(id: string, available: boolean): Promise<void>
+  findById(id: string): Promise<Movie>
 }
 
 export { IMoviesRepository, IRequest }

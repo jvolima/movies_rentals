@@ -1,4 +1,4 @@
-import { Rental } from "@prisma/client";
+import { Movie, Rental } from "@prisma/client";
 import prismaClient from "../../../../prisma";
 import { ICreateRentalsDTO } from "../../dtos/ICreateRentalsDTO";
 import { IRentalsRepository } from "../IRentalsRepository";
@@ -9,7 +9,7 @@ class RentalsRepository implements IRentalsRepository {
       data: {
         user_id,
         movie_id,
-        expected_return_date
+        expected_return_date,
       }
     });
 
@@ -25,6 +25,28 @@ class RentalsRepository implements IRentalsRepository {
     });
 
     return openRental as Rental;
+  }
+
+  async findById(id: string): Promise<Rental> {
+    const rental = await prismaClient.rental.findFirst({
+      where: { id }
+    });
+
+    return rental as Rental;
+  }
+
+  async updateRental(id: string, total: number, end_at: Date): Promise<Rental> {
+    const rental = await prismaClient.rental.update({
+      where: { 
+        id 
+      },
+      data: {
+        total,
+        end_at
+      }
+    });
+
+    return rental;
   }
 }
 
