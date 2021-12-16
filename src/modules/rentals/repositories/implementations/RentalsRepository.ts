@@ -1,4 +1,4 @@
-import { Movie, Rental } from "@prisma/client";
+import { Rental } from "@prisma/client";
 import prismaClient from "../../../../prisma";
 import { ICreateRentalsDTO } from "../../dtos/ICreateRentalsDTO";
 import { IRentalsRepository } from "../IRentalsRepository";
@@ -47,6 +47,16 @@ class RentalsRepository implements IRentalsRepository {
     });
 
     return rental;
+  }
+
+  async findRentalsByUserId(user_id: string): Promise<Rental[]> {
+    const rentals = await prismaClient.rental.findMany({
+      where: {
+        user_id
+      }
+    });
+
+    return rentals;
   }
 }
 

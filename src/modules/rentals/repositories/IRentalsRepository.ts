@@ -6,6 +6,7 @@ interface IRentalsRepository {
   findOpenRentalByUser(user_id: string): Promise<Rental>
   findById(id: string): Promise<Rental>
   updateRental(id: string, total: number, end_at: Date): Promise<Rental>
+  findRentalsByUserId(user_id: string): Promise<Rental[]>
 }
 
 export { IRentalsRepository }
