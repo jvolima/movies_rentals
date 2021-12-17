@@ -48,17 +48,25 @@
 
 ### Create rentals
 **RF**
-- [] Should be able to create a new rental
+- [x] Should be able to create a new rental
 
 **RN**
-- [] Should not be able to create a new rental if user is not authenticated.
-- [] Should not be able to create a new rental if movie is not available.
-- [] Should not be able to create a new rental if user have a rental in progress.
-- [] Should not be able to create a new rental if expected_return_date is before the date  
+- [x] Should not be able to create a new rental if user is not authenticated.
+- [x] Should not be able to create a new rental if movie is not available.
+- [x] Should not be able to create a new rental if user have a rental in progress.
+- [x] Should not be able to create a new rental if expected_return_date is before the date  
+
+### Devolution rental
+**RF**
+- [x] Should be able to devolute a open rental
+
+**RN**
+- [x] Should not be able to devolute a rental if user is not authenticated
+- [x] If user devolute a rental in less than one day, the daily has to be changed to one day
 
 ### List rentals
 **RF**
-- [] Should be able to list user's rentals
+- [x] Should be able to list user's rentals
 
 **RN**
-- [] Should not be able to list the user's rentals if user isn't authenticated.
+- [x] Should not be able to list the user's rentals if user isn't authenticated.
