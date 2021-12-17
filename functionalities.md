@@ -54,6 +54,7 @@
 - [] Should not be able to create a new rental if user is not authenticated.
 - [] Should not be able to create a new rental if movie is not available.
 - [] Should not be able to create a new rental if user have a rental in progress.
+- [] Should not be able to create a new rental if expected_return_date is before the date  
 
 ### List rentals
 **RF**
