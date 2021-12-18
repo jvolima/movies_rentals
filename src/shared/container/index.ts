@@ -9,8 +9,8 @@ import { RentalsRepository } from "../../modules/rentals/repositories/implementa
 import { IRentalsRepository } from "../../modules/rentals/repositories/IRentalsRepository";
 import { UsersRepository } from "../../modules/users/repositories/implementations/UsersRepository";
 import { IUsersRepository } from "../../modules/users/repositories/IUsersRepository";
-import { IDateProvider } from "./providers/IDateProvider";
-import { DayjsDateProvider } from "./providers/implementations/DayjsDateProvider";
+import { IDateProvider } from "./providers/DateProvider/IDateProvider";
+import { DayjsDateProvider } from "./providers/DateProvider/implementations/DayjsDateProvider";
 
 container.registerSingleton<IUsersRepository>(
   "UsersRepository",

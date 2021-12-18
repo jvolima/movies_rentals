@@ -1,6 +1,6 @@
 import { inject, injectable } from "tsyringe";
 import { AppError } from "../../../../errors/AppError";
-import { IDateProvider } from "../../../../shared/container/providers/IDateProvider";
+import { IDateProvider } from "../../../../shared/container/providers/DateProvider/IDateProvider";
 import { IMoviesRepository } from "../../../movies/repositories/IMoviesRepository";
 import { IRentalsRepository } from "../../repositories/IRentalsRepository";
 
